@@ -31,6 +31,7 @@ const CourseSchema = mongoose.Schema ({
     sessions: {
         type:[SessionSubSchema]
     },
+    students: [{ type: mongoose.Schema.Types.ObjectId, ref: "Student" }],
 },
 { 
     timestamps: true

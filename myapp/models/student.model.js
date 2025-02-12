@@ -63,7 +63,8 @@ const StudentSchema = mongoose.Schema({
     program: {
         type: String,
         required: [true, "Please enter the program name"],
-    }
+    },
+    courses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
 },
 { 
     timestamps: true
